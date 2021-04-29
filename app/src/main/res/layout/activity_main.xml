@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_padding"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.android.musicalstructure.MainActivity"
+    android:fillViewport="true">
+
+    <LinearLayout
+        style="@style/ContentStyle">
+    <Button
+        android:id="@+id/button_navigation"
+        style="@style/ButtonStyle"
+        android:text="@string/activity_navigation_name"/>
+    <Button
+        android:id="@+id/button_player"
+        android:text="@string/activity_player_name"
+        style="@style/ButtonStyle"/>
+    <Button
+        android:id="@+id/button_playlist"
+        android:text="@string/activity_playlist_name"
+        style="@style/ButtonStyle"/>
+    <Button
+        android:id="@+id/button_album"
+        android:text="@string/activity_album_name"
+        style="@style/ButtonStyle"/>
+    <Button
+        android:id="@+id/button_artist"
+        android:text="@string/activity_artist_name"
+        style="@style/ButtonStyle"/>
+    <Button
+        android:id="@+id/button_library"
+        android:text="@string/activity_library_name"
+        style="@style/ButtonStyle"/>
+    </LinearLayout>
+</ScrollView>

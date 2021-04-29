@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Musical Structure</string>
+
+    <string name="activity_navigation_name">Navigation</string>
+    <string name="activity_navigation_content">
+        \t-Using PagerView and TabLayout to navigate between screen fragments.\n
+        \t-Screens will be displayed using PagerView and fragments.\n
+        \t-Mini player on bottom, displayed constantly in between screens.
+    </string>
+
+    <string name="activity_playlist_name">Playlist Screen</string>
+    <string name="activity_playlist_content">
+        Top of the activity will contain 2 spinners.\n
+        \t-First spinner is for choosing playlist or adding new one.\n
+        \t-Second spinner is for sorting options\n
+        \n
+        Playlist data will be stored in ArrayList&lt;Song>. Playlist elements will be displayed
+        using ListView with custom ListAdapter to display cover, song information, buttons List
+        elements will also have hidden checkbox for management purposes as creating new screen for
+        management might affect fluidity.\n
+        \n
+        Song information will be displayed as dialog containing metadata and file information,
+        since its unlikely to be used often data will be read from metadata on request, storing all
+        metadata in arrays seems like a waste.\n
+        \n
+        Long press on any song will unlock management options like dragging songs to change order
+        or removing them.
+    </string>
+
+    <string name="activity_artist_name">Artist Screen</string>
+    <string name="activity_artist_content">
+        View will be generated using ExpandableListView and custom adapter, elements will display
+        list of artists, upon expansion element will list songs by artist sorted by album.\n
+        Artist Data will be created while loading file list data, possibly it will be stored in
+        hash maps.
+    </string>
+
+    <string name="activity_album_name">Album Screen</string>
+    <string name="activity_album_content">
+        On top, above generated list will contain Sorting Spinner\n
+        View will be generated using ExpandableListView and custom adapter, elements will display
+        list of albums, upon expansion will list all songs within  album.
+    </string>
+
+    <string name="activity_library_name">Library Screen</string>
+    <string name="activity_library_content">
+        On top will contain a search bar for filtering data. Possibly using Filter\n
+        This screen will display all songs in simplified format Song-Title [album] for management
+        purposes. Displayed elements will be minimal, Longpress on element will allow show menu for
+        quickly removing songs from library, adding them to playlists and multiple element
+        manipulation mode which will show checkboxes and menu for song manipulation\n
+        \n
+        Upon adding song info will parsed using MedaMetadataRetriever and added as SongClass to
+        library database.\n
+        Song class will contain path to file, and basic metadata needed for displays.
+    </string>
+
+    <string name="activity_player_name">Player</string>
+    <string name="activity_player_description">
+        -Player will use separate class rather than fragment, player will stay displayed on
+        majority of application screens.\n
+        -As input player will take either Song class or Playlist array along with position.\n
+        -Playback will be implemented using android MediaPlayer class.
+    </string>
+</resources>
